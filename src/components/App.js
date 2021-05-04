@@ -1,17 +1,25 @@
 import React from 'react';
-
-import catalogueList from './catalogueList'
-import catalogueFilter from './catalogueFilter'
+import Nav from './Nav'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CatalogueList from '../containers/CatalogueList'
+import Catalogue from './Catalogue'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-   <div>
+    <div>
+    <BrowserRouter>
+    <Nav />
+    <Switch>
+     
+      <Route exact path="/" component={CatalogueList} />
+      <Route exact path="/Catalogue" component={Catalogue} />
 
-     <catalogueList />
-     <catalogueFilter />
-    </div>
+    </Switch>
+  </BrowserRouter>
+  </div>
   );
 }
 
 export default App;
+
