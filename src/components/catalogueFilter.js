@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import { PropTypes } from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux'
 
 const catalogueFilter = ({ handleFilterChange }) => {
   const categories = [
@@ -20,7 +21,7 @@ const catalogueFilter = ({ handleFilterChange }) => {
         className="selectbox d-flex"
       >
         <Form.Label className="selectbox-title mt-2">
-          Filter books by category:
+          Filter food by category:
         </Form.Label>
         <Form.Control
           as="select"
