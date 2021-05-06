@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import CatalogueList from '../containers/CatalogueList'
 import Catalogue from './Catalogue'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '.././style.css';
 const App = () => {
   return (
     <div>
