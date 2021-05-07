@@ -1,27 +1,19 @@
 import Form from 'react-bootstrap/Form';
 import { PropTypes } from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux'
+import { fetchCatalogs } from '../reducers/catalogueSlice';
 
-const catalogueFilter = ({ handleFilterChange }) => {
-  const categories = [
-    'All',
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
+const catalogueFilter = ({ categories, handleFilterChange }) => {
+ 
 
   return (
     <Form>
       <Form.Group
         controlId="exampleForm.CategorySelect1"
-        className="selectbox d-flex"
+        className="selectbox d-flex justtify-content-around"
       >
         <Form.Label className="selectbox-title mt-2">
-          Filter food by category:
+          <span>Category:</span>
         </Form.Label>
         <Form.Control
           as="select"
@@ -32,6 +24,7 @@ const catalogueFilter = ({ handleFilterChange }) => {
         >
           {categories.map((category) => (
             <option key="i">{category}</option>
+            
           ))}
         </Form.Control>
       </Form.Group>

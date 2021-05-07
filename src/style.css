@@ -1,7 +1,57 @@
 .sec-2-grid {
+    display: grid;
     padding-top: 3%;
     grid-template-columns: repeat(4, minmax(180px, 1fr));
+    grid-column-gap: 1%;
+    grid-row-gap: 8%;
+    height: auto;
+    margin-left: 2%;
+  }
+
+  .item-name 
+  {
+      padding-left: 15%;
+  }
+  .selectbox {
+    width: 50%;
+    margin-left: 10%;
+  }
+  
+  .selectbox-title {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1050px) {
+    .sec-2-grid {
+      padding-top: 3%;
+      grid-template-columns: repeat(2, minmax(215px, 1fr));
+      grid-column-gap: 2%;
+      grid-row-gap: 8%;
+      height: auto;
+      margin-left: 2%;
+    }
+  }
+  @media screen and (min-width: 1050px) and (max-width: 1500px) {
+  .sec-2-grid {
+    padding-top: 3%;
+    grid-template-columns: repeat(3, minmax(215px, 1fr));
     grid-column-gap: 2%;
     grid-row-gap: 8%;
     height: auto;
+    margin-left: 2%;
   }
+}
+@media screen and (min-width: 450px) and (max-width: 767px) {
+    .sec-2-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 0;
+        margin-left: 22%;
+      }
+
+      .item-name 
+      {
+          padding-left: 15%;
+      }
+    }

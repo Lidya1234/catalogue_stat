@@ -1,10 +1,12 @@
 import React,{ useEffect }  from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { DISPLAYLIST, FILTERLIST } from '../reducers/catalogueSlice'
+import { CHANGE_FILTER } from '../reducers/catalogueSlice'
 import Catalogue from '../components/Catalogue'
 import { fetchCatalogs } from '../reducers/catalogueSlice'
 import CatalogueFilter from '../components/CatalogueFilter'
 import CardGroup from 'react-bootstrap/CardGroup';
+import '.././style.css';
+
 
 const CatalogueList = () => {
   
@@ -16,15 +18,27 @@ useEffect(() =>
   
 },[])
 const {catalogues, cataloguesLoading, catalogueLoading, catalogue, filter } = useSelector((state) => state.catalog)
-console.log (catalogues)
-  // const filtered = filter === 'ALL' ? catalogues : catalogues.filter(item => catalogue[item].strCategory.includes(filter))
-  //const addCatalog =( catalog ) => {<Catalogue key ={catalog.idCategory} item={catalog} />}
+const handleFilterChange = (event) => {
+  event.preventDefault();
 
+  dispatch(CHANGE_FILTER(event.target.value));
+};
+console.log (catalogues)
+if (filter === undefined)
+{
+  filter = 'ALL'
+}
+  const filtered = filter === 'ALL' ? catalogues : catalogues.filter(catalog => catalog.strCategory.includes(filter))
+
+const categories = []
+categories.push('ALL')
+ catalogues.map(x => categories.push(x.strCategory))
+ 
   return (
     <div>
-     <CatalogueFilter /> 
-     <div className= "grid sec-2-grid ">
-     {catalogues.map((catalog) => <Catalogue key ={catalog.idCategory} item={catalog.strCategory}  name = {catalog.strCategoryThumb}/>) }
+     <CatalogueFilter categories={ categories } handleFilterChange = { handleFilterChange }/> 
+    <div className="sec-2-grid">
+     {filtered.map((catalog) => <Catalogue key ={catalog.idCategory} item={catalog.strCategory}  name = {catalog.strCategoryThumb}/>) }
      </div>
 
     </div>

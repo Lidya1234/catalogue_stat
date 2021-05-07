@@ -1,10 +1,10 @@
+import Navbar from 'react-bootstrap/Navbar';
 const Nav = () =>
 {
     return(
-        <ul>
-            <li>A</li>
-            <li>B</li>
-        </ul>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Meal-Categories</Navbar.Brand>
+        </Navbar>
     )
 }
 export default Nav;
