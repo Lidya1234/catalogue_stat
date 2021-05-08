@@ -20,6 +20,36 @@
   .selectbox-title {
     width: 100%;
   }
+.singleCatalog
+{
+    padding-left: 35%;
+}
+
+.card {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 4rem;
+  margin-right: 30%;
+  color: black;
+
+
+}
+
+.footer {
+  bottom: 0;
+
+  background-color: black;
+  width: 100%;
+  margin: 0;
+  height: 3rem;
+}
+
+.footer-txt
+{
+  margin-left: 40%;
+  color: white;
+  margin-top: 20%;
+}
 
   @media screen and (min-width: 768px) and (max-width: 1050px) {
     .sec-2-grid {
