@@ -1,36 +1,30 @@
 import Form from 'react-bootstrap/Form';
 import { PropTypes } from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux'
-import { fetchCatalogs } from '../reducers/catalogueSlice';
 
-const catalogueFilter = ({ categories, handleFilterChange }) => {
- 
-
-  return (
-    <Form>
-      <Form.Group
-        controlId="exampleForm.CategorySelect1"
-        className="selectbox d-flex justtify-content-around"
+const catalogueFilter = ({ categories, handleFilterChange }) => (
+  <Form>
+    <Form.Group
+      controlId="exampleForm.CategorySelect1"
+      className="selectbox d-flex justtify-content-around"
+    >
+      <Form.Label className="selectbox-title mt-2">
+        <span>Category:</span>
+      </Form.Label>
+      <Form.Control
+        as="select"
+        className="mt-1"
+        onChange={(event) => {
+          handleFilterChange(event);
+        }}
       >
-        <Form.Label className="selectbox-title mt-2">
-          <span>Category:</span>
-        </Form.Label>
-        <Form.Control
-          as="select"
-          className="mt-1"
-          onChange={(event) => {
-            handleFilterChange(event);
-          }}
-        >
-          {categories.map((category) => (
-            <option key="i">{category}</option>
-            
-          ))}
-        </Form.Control>
-      </Form.Group>
-    </Form>
-  );
-};
+        {categories.map((category) => (
+          <option key="i">{category}</option>
+
+        ))}
+      </Form.Control>
+    </Form.Group>
+  </Form>
+);
 
 catalogueFilter.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
