@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import Loading from '../components/Loading';
 import { CHANGE_FILTER, fetchCatalogs } from '../reducers/catalogueSlice';
 import Catalogue from '../components/Catalogue';
 
@@ -13,8 +13,9 @@ const CatalogueList = () => {
     dispatch(fetchCatalogs());
   }, []);
   const {
-    catalogues, cataloguesLoading, catalogueLoading, catalogue, filter,
+    catalogues, cataloguesLoading,
   } = useSelector((state) => state.catalog);
+  let { filter } = useSelector((state) => state.catalog);
   const handleFilterChange = (event) => {
     event.preventDefault();
 
@@ -29,12 +30,22 @@ const CatalogueList = () => {
   const categories = [];
   categories.push('ALL');
   catalogues.map((x) => categories.push(x.strCategory));
-
+  if (cataloguesLoading === 'PENDING') {
+    return (
+      <Loading />
+    );
+  }
   return (
     <div>
       <CatalogueFilter categories={categories} handleFilterChange={handleFilterChange} />
-      <div className="sec-2-grid">
-        {filtered.map((catalog) => <Catalogue key={catalog.idCategory} item={catalog.strCategory} name={catalog.strCategoryThumb} />) }
+      <div className="sec-2-grid item-list">
+        {filtered.map((catalog) => (
+          <Catalogue
+            key={catalog.idCategory}
+            item={catalog.strCategory}
+            name={catalog.strCategoryThumb}
+          />
+        )) }
       </div>
 
     </div>
