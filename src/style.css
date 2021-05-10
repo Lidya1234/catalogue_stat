@@ -31,16 +31,19 @@
   margin-top: 4rem;
   margin-right: 30%;
   color: black;
-
-
 }
 
-.footer {
-  bottom: 0;
+.item-list
+{
+  margin-bottom: 5%;
+}
 
+footer {
+ position: fixed;
+  bottom: 0;
   background-color: black;
   width: 100%;
-  margin: 0;
+
   height: 3rem;
 }
 
@@ -48,7 +51,7 @@
 {
   margin-left: 40%;
   color: white;
-  margin-top: 20%;
+
 }
 
   @media screen and (min-width: 768px) and (max-width: 1050px) {
