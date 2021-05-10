@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Loading from '../components/Loading';
 import { CHANGE_FILTER, fetchCatalogs } from '../reducers/catalogueSlice';
-import Catalogue from '../components/Catalogue';
+import Catalogue from '../components/catalogue';
 
 import CatalogueFilter from '../components/CatalogueFilter';
 import '../style.css';
