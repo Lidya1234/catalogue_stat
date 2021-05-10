@@ -4,7 +4,7 @@ import Loading from '../components/Loading';
 import { CHANGE_FILTER, fetchCatalogs } from '../reducers/catalogueSlice';
 import Catalogue from '../components/catalogue';
 
-import CatalogueFilter from '../components/CatalogueFilter';
+import CatalogueFilter from '../components/catalogueFilter';
 import '../style.css';
 
 const CatalogueList = () => {
