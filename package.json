@@ -21,7 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "remote-redux-devtools": "^0.5.16",
-    "save-dev": "*",
+
     "web-vitals": "^1.0.1"
   },
   "scripts": {
