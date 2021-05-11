@@ -9,8 +9,10 @@ const Catalogue = ({ key, item, name }) => {
   const dispatch = useDispatch();
   return (
     <Link to="/Singlelist" onClick={() => dispatch(CHANGE_FILTER(item))}>
-      <img src={name} alt={key} />
-      <h1 className="item-name">{item}</h1>
+      <div data-testid="catalogue">
+        <img src={name} alt={key} />
+        <h1 className="item-name">{item}</h1>
+      </div>
     </Link>
 
   );
