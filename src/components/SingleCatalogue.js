@@ -1,18 +1,20 @@
 import { PropTypes } from 'prop-types';
 
 const SingleCatalogue = ({
-  key, item, name, description,
+  item, name, description,
 }) => (
-  <div className="single-catalog card">
+  <div className="single-catalog card" data-testid="catalogue">
     <h1 className="item-name">{item}</h1>
-    <img src={name} alt={key} />
-
-    <h5><i>{description}</i></h5>
+    <img src={name} alt={name} />
+    <h5>
+      <i>
+        {description}
+      </i>
+    </h5>
   </div>
 );
 
 SingleCatalogue.propTypes = {
-  key: PropTypes.string.isRequired,
   item: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
