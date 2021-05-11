@@ -1,4 +1,4 @@
-# Catalogue Stastics
+# Catalogue Statistics
 
 This is a catalog statistics project built with react, HTML5, CSS3, and redux toolkit. It fetches data from https://www.themealdb.com/api/json/v1/1/categories.php API. It lists the food categories each image is clickable, and it is linked to the description of each item.
 <img src="Capture.PNG">
