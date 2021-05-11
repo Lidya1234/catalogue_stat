@@ -14,7 +14,7 @@ describe('The Footer should match with snapshot', () => {
   test('Matchs snapshot', () => {
     expect(getByText).toMatchSnapshot();
   });
-  
+
   const component = renderer.create(
     <MemoryRouter>
       <Footer />

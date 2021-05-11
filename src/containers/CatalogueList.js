@@ -21,7 +21,6 @@ const CatalogueList = () => {
 
     dispatch(CHANGE_FILTER(event.target.value));
   };
-  console.log(catalogues);
   if (filter === undefined) {
     filter = 'ALL';
   }
