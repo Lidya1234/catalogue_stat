@@ -12,10 +12,8 @@ const Singlelist = () => {
     dispatch(fetchCatalogs());
   }, []);
   const {
-    catalogues, cataloguesLoading, catalogue, filter,
+    catalogues, cataloguesLoading, filter,
   } = useSelector((state) => state.catalog);
-
-  console.log(catalogue);
 
   const filtered = filter === 'ALL' ? catalogues : catalogues.filter((catalog) => catalog.strCategory.includes(filter));
   if (cataloguesLoading === 'PENDING') {
@@ -29,7 +27,7 @@ const Singlelist = () => {
       <div className="item-list">
         {filtered.map((catalog) => (
           <SingleCatalogue
-            key={catalog.idCategory}
+            key={catalog.strCategoryThumb}
             item={catalog.strCategory}
             name={catalog.strCategoryThumb}
             description={catalog.strCategoryDescription}
