@@ -48,21 +48,10 @@ export const catalogueSlice = createSlice({
     [fetchCatalogs.rejected](state) {
       state.cataloguesLoading = HTTP_STATUS.REJECTED;
     },
-    // [fetchCatalog.pending](state) {
-    //   console.log('try');
-    //   state.catalogueLoading = HTTP_STATUS.PENDING;
-    // },
-    // [fetchCatalog.fulfilled](state, action) {
-    //   state.catalogueLoading = HTTP_STATUS.FULLFILLED;
-    //   state.catalogue = action.payload;
-    // },
-    // [fetchCatalog.rejected](state) {
-    //   state.catalogueLoading = HTTP_STATUS.REJECTED;
-    // },
   },
 });
 /* eslint-enable no-param-reassign */
 // Action creators are generated for each case reducer function
-export const { CHANGE_FILTER, FILTERLIST } = catalogueSlice.actions;
+export const { CHANGE_FILTER } = catalogueSlice.actions;
 
 export default catalogueSlice.reducer;
