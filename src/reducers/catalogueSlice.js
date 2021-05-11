@@ -5,15 +5,13 @@ import { HTTP_STATUS } from '../app/constants';
 export const fetchCatalogs = createAsyncThunk(
   'catalogue/fetchCatalogs', async () => {
     const { data } = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
-    console.log(data);
     return data.categories;
   },
 );
 
 export const fetchCatalog = createAsyncThunk(
-  'catalogue/fetchCatalog', async () => {
-    const { data } = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood');
-    console.log(data);
+  'catalogue/fetchCatalog', async (name) => {
+    const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${name}`);
     return data;
   },
 );
@@ -38,7 +36,6 @@ export const catalogueSlice = createSlice({
   /* eslint-disable no-param-reassign */
   extraReducers: {
     [fetchCatalogs.pending](state) {
-      console.log('try');
       state.cataloguesLoading = HTTP_STATUS.PENDING;
     },
     [fetchCatalogs.fulfilled](state, action) {
