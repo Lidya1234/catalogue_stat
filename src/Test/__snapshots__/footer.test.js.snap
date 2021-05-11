@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Footer should match with snapshot Matchs snapshot 1`] = `[Function]`;
+
+exports[`The Footer should match with snapshot Matchs snapshot 2`] = `
+<footer
+  className="footer"
+>
+  <p
+    className="footer-txt"
+  >
+     All Rights Reserved Lidya.G @2021
+  </p>
+</footer>
+`;
+
+exports[`The navigation bar should contain Matchs snapshot 1`] = `[Function]`;

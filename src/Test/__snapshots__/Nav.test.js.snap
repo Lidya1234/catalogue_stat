@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The navigation bar should contain Matchs snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark"
+>
+  <a
+    className="navbar-brand"
+    href="#home"
+  >
+    Meal-Categories
+  </a>
+</nav>
+`;

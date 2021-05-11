@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Footer should match with snapshot Matchs snapshot 1`] = `
+<div
+  className="single-catalog card"
+  data-testid="catalogue"
+>
+  <h1
+    className="item-name"
+  >
+    Beef
+  </h1>
+  <img
+    alt="https://www.themealdb.com/images/category/beef.png"
+    src="https://www.themealdb.com/images/category/beef.png"
+  />
+  <h5>
+    <i>
+      Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]
+    </i>
+  </h5>
+</div>
+`;
+
+exports[`The single Catalogue component should render with this information Matchs snapshot 1`] = `
+<div
+  className="single-catalog card"
+  data-testid="catalogue"
+>
+  <h1
+    className="item-name"
+  >
+    Beef
+  </h1>
+  <img
+    alt="https://www.themealdb.com/images/category/beef.png"
+    src="https://www.themealdb.com/images/category/beef.png"
+  />
+  <h5>
+    <i>
+      Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]
+    </i>
+  </h5>
+</div>
+`;
+
+exports[`The singleCatalogue component should render with this information Matchs snapshot 1`] = `
+<div
+  className="single-catalog card"
+  data-testid="catalogue"
+>
+  <h1
+    className="item-name"
+  >
+    Beef
+  </h1>
+  <img
+    alt="https://www.themealdb.com/images/category/beef.png"
+    src="https://www.themealdb.com/images/category/beef.png"
+  />
+  <h5>
+    <i>
+      Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]
+    </i>
+  </h5>
+</div>
+`;
