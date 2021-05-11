@@ -1,7 +1,8 @@
 # Catalogue Stastics
 
-This is a catalog statistics project built with react, HTML5, CSS3, and redux toolkit. It fetches data from https://www.themealdb.com/api/json/v1/1/categories.php API.
+This is a catalog statistics project built with react, HTML5, CSS3, and redux toolkit. It fetches data from https://www.themealdb.com/api/json/v1/1/categories.php API. It lists the food categories each image is clickable, and it is linked to the description of each item.
 <img src="Capture.PNG">
+<img src="SingleCategory.PNG">
 ## Built With
 
 - HTML5
@@ -9,6 +10,7 @@ This is a catalog statistics project built with react, HTML5, CSS3, and redux to
 - BOOTSTRAP4
 - React
 - REDUX TOOLKIT
+- React hooks
 
 ## Live Demo
 [Live_Demo](https://lidu-catalogue-stat.herokuapp.com/)
