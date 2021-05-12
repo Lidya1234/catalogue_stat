@@ -9,12 +9,12 @@ import '../style.css';
 
 const CatalogueList = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchCatalogs());
-  }, []);
   const {
     catalogues, cataloguesLoading,
   } = useSelector((state) => state.catalog);
+  useEffect(() => {
+    dispatch(fetchCatalogs());
+  }, [dispatch]);
   let { filter } = useSelector((state) => state.catalog);
   const handleFilterChange = (event) => {
     event.preventDefault();

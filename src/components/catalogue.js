@@ -3,12 +3,12 @@ import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../style.css';
 import { useDispatch } from 'react-redux';
-import { CHANGE_FILTER } from '../reducers/catalogueSlice';
+import { CHANGE_SINGLE } from '../reducers/catalogueSlice';
 
 const Catalogue = ({ key, item, name }) => {
   const dispatch = useDispatch();
   return (
-    <Link to="/Singlelist" onClick={() => dispatch(CHANGE_FILTER(item))}>
+    <Link to="/Singlelist" onClick={() => dispatch(CHANGE_SINGLE(item))}>
       <div data-testid="catalogue">
         <img src={name} alt={key} />
         <h1 className="item-name">{item}</h1>

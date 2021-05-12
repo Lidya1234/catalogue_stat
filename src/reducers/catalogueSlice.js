@@ -12,7 +12,7 @@ export const fetchCatalogs = createAsyncThunk(
 export const fetchCatalog = createAsyncThunk(
   'catalogue/fetchCatalog', async (name) => {
     const { data } = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${name}`);
-    return data;
+    return data.meals;
   },
 );
 export const catalogueSlice = createSlice({
@@ -20,14 +20,16 @@ export const catalogueSlice = createSlice({
   initialState: {
     catalogues: [],
     cataloguesLoading: null,
-
-    catalogueLoading: null,
-    catalogue: {},
     filter: 'ALL',
+    single: 'ALL',
   },
   reducers: {
     CHANGE_FILTER: (state, action) => ({
       filter: action.payload,
+      catalogues: state.catalogues,
+    }),
+    CHANGE_SINGLE: (state, action) => ({
+      single: action.payload,
       catalogues: state.catalogues,
 
     }),
@@ -49,6 +51,6 @@ export const catalogueSlice = createSlice({
 });
 /* eslint-enable no-param-reassign */
 // Action creators are generated for each case reducer function
-export const { CHANGE_FILTER } = catalogueSlice.actions;
+export const { CHANGE_FILTER, CHANGE_SINGLE } = catalogueSlice.actions;
 
 export default catalogueSlice.reducer;
