@@ -18,7 +18,7 @@ const catalogueFilter = ({ categories, handleFilterChange }) => (
         }}
       >
         {categories.map((category) => (
-          <option key="i">{category}</option>
+          <option key={category}>{category}</option>
 
         ))}
       </Form.Control>
