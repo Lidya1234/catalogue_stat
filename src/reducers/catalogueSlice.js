@@ -47,6 +47,16 @@ export const catalogueSlice = createSlice({
     [fetchCatalogs.rejected](state) {
       state.cataloguesLoading = HTTP_STATUS.REJECTED;
     },
+    [fetchCatalog.pending](state) {
+      state.cataloguesLoading = HTTP_STATUS.PENDING;
+    },
+    [fetchCatalog.fulfilled](state, action) {
+      state.cataloguesLoading = HTTP_STATUS.FULLFILLED;
+      state.catalogues = action.payload;
+    },
+    [fetchCatalog.rejected](state) {
+      state.cataloguesLoading = HTTP_STATUS.REJECTED;
+    },
   },
 });
 /* eslint-enable no-param-reassign */
